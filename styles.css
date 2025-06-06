@@ -1,0 +1,134 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    /* Primary Colors */
+    --Primary-Cyan: hsl(179, 62%, 43%);
+    --Secondary-Cyan: hsl(179, 62%, 50%);
+    --Primary-Bright-Yellow: hsl(71, 73%, 54%);
+
+    /* Neutral Colors */
+    --Neutral-Light-Gray: hsl(204, 43%, 93%);
+    --Neutral-Grayish-Blue: hsl(218, 22%, 67%);
+}
+
+body {
+    background-color: var(--Neutral-Light-Gray);
+    color: var(--Neutral-Grayish-Blue);
+    min-height: 100vh;
+    font-family: Karla;
+    font-size: 16px;
+    display: grid;
+    place-content: center;
+}
+
+.pricing-grid {
+    max-width: 700px;
+    margin: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-radius: .5rem;
+    box-shadow: 0 0 24px #ababab;
+    overflow: hidden;
+}
+
+.block {
+    padding: 2rem;
+}
+
+.block1 {
+    grid-column: span 2;
+    background-color: #fff;
+}
+
+.block1 .heading {
+    color: var(--Primary-Cyan);
+    margin-bottom: 1.25rem;
+    font-size: 1,5rem;
+    font-weight: 700;
+}
+
+.block1 .subheading {
+    color: var(--Primary-Bright-Yellow);
+    margin-bottom: .75rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.block1 .block-text {
+    line-height: 1.4;
+}
+
+.block2 .heading,
+.block3 .heading {
+    margin-bottom: .5rem;
+    font-size: 1.15rem;
+}
+
+.block2 {
+    background-color: var(--Primary-Cyan);
+    color: #fff;
+}
+
+.block2 .heading {
+    margin-bottom: 1.25rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.block2 .pricing {
+    color: var(--Neutral-Light-Gray);
+    margin-bottom: .5rem;
+}
+
+.block2 .pricing .price {
+    color: #fff;
+    margin-right: .5rem;
+    font-size: 2.5rem;
+}
+
+.block2 button {
+    cursor: pointer;
+    background-color: var(--Primary-Bright-Yellow);
+    color: #fff;
+    width: 100%;
+    padding: 1rem;
+    margin-top: 2rem;
+    border: 0;
+    border-radius: .25rem;
+    box-shadow: 0 0 8px 1px #4e4e4e45;
+}
+
+.block3 {
+    background-color: var(--Secondary-Cyan);
+    color: #fff;
+}
+
+.block3 .heading {
+    margin-bottom: 1.25rem;
+    font-weight: 700;
+}
+
+.block3 a {
+    color: #fff;
+    margin-bottom: .15rem;
+    text-decoration: none;
+    display: block;
+}
+
+.block3 a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width:540px) {
+    .pricing-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .block1 {
+        grid-column: span 1;
+    }
+}
